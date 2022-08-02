@@ -8,7 +8,7 @@ class Window:
         self.settings = update_settings()
 
         self.screen = pg.display.set_mode((self.settings["screen.width"], self.settings["screen.height"]), pg.NOFRAME)
-        pg.display.set_caption(self.settings["title"])
+        pg.display.set_caption(self.settings["window-name"])
 
         self.taskbar = Taskbar(self)
 
