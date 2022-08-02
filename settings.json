@@ -1,0 +1,39 @@
+{
+  "screen": {
+    "width": 1920,
+    "height": 1080,
+    "background-color": "black"
+  },
+  "taskbar": {
+    "height": 30,
+    "background-color": "#13bc0c",
+    "off-background-color": "#074805",
+    "hover-background-color": "#14ce0d",
+    "close": {
+      "img-path": "close.png",
+      "img-topleft": [
+        -30,
+        5
+      ],
+      "button-topleft": [
+        -40,
+        0
+      ],
+      "size": [
+        20,
+        20
+      ]
+    },
+    "title": {
+      "name": "***CHANGE***",
+      "font": {
+        "name": "Caladea",
+        "size": 16,
+        "color": "#000000"
+      },
+      "x-pad": 10
+    }
+  },
+  "fps": 30,
+  "title": "***CHANGE***"
+}
