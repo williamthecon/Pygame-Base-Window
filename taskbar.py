@@ -50,10 +50,17 @@ class Taskbar:
         tcbt = self.settings["taskbar.close.button-topleft"]
         tcbt = [self.settings["screen.width"] + tcbt[0], tcbt[1]]
 
+        tmbt = self.settings["taskbar.minimize.button-topleft"]
+        tmbt = [self.settings["screen.width"] + tmbt[0], tmbt[1]]
+
         if inbetween(pos, topleft=tcbt, bottomright=self.bottomright):
             self.hover = "close"
             if pressed[0] and pressed[0] != self.mouse_last_pressed[0]:
                 end(f"Manual exit by pressing the exit button after '{perf_counter()}s'")
+        if inbetween(pos, topleft=tmbt, bottomright=[tcbt[0] - 1, tcbt[1] + self.settings["taskbar.height"]]):
+            self.hover = "minimize"
+            if pressed[0] and pressed[0] != self.mouse_last_pressed[0]:
+                pg.display.iconify()
 
 
         self.mouse_last_pressed = pressed
@@ -76,6 +83,12 @@ class Taskbar:
         tcit = self.settings["taskbar.close.img-topleft"]
         tcit = [self.settings["screen.width"] + tcit[0], tcit[1]]
         self.window.screen.blit(surf, tcit)
+
+        # minimize img
+        surf = pg.transform.scale(pg.image.load(self.settings["taskbar.minimize.img-path"]), self.settings["taskbar.minimize.size"])
+        tmit = self.settings["taskbar.minimize.img-topleft"]
+        tmit = [self.settings["screen.width"] + tmit[0], tmit[1]]
+        self.window.screen.blit(surf, tmit)
 
         # title
         text = self.font.render(self.settings["taskbar.title.name"], True, self.settings["taskbar.title.font.color"])

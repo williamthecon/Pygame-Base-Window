@@ -24,8 +24,23 @@
         20
       ]
     },
+    "minimize": {
+      "img-path": "minimize.png",
+      "img-topleft": [
+        -70,
+        5
+      ],
+      "button-topleft": [
+        -80,
+        0
+      ],
+      "size": [
+        20,
+        20
+      ]
+    },
     "title": {
-      "name": "***CHANGE***",
+      "name": "YTP v1.0",
       "font": {
         "name": "Caladea",
         "size": 16,
@@ -35,5 +50,5 @@
     }
   },
   "fps": 30,
-  "window-name": "***CHANGE***"
+  "title": "YTP v1.0"
 }
