@@ -21,7 +21,7 @@ clock = pg.time.Clock()
 while True:
     for event in pg.event.get():
         if event.type == pg.QUIT:
-            end()
+            end(f"Manual exit by pressing the close button after {perf_counter()}s")
 
         if event.type == pg.KEYDOWN:
             if event.key == pg.K_ESCAPE:
