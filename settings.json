@@ -40,7 +40,7 @@
       ]
     },
     "title": {
-      "name": "YTP v1.0",
+      "name": "Title",
       "font": {
         "name": "Caladea",
         "size": 16,
@@ -50,5 +50,5 @@
     }
   },
   "fps": 30,
-  "title": "YTP v1.0"
+  "title": "Window title"
 }
